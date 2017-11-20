@@ -6,4 +6,4 @@ Utilizing Nash Equlibrium and dominant strategies to select an optimal outcome i
 # Usage
 
 # Progress
-This is still a work in progress. For the most part, the logic on the backend is complete. Issues persist with selecting an option aside from the first in the array (activeGifts)to make inactive due to steals (x2). The outlying logic is based on an article from FiveThirtyEight.
+This is still a work in progress. For the most part, the logic on the backend is complete. Issues persist with selecting an option aside from the first in the array (activeGifts)to make inactive due to steals (x2). The underlying idea is inspired from an article from FiveThirtyEight.
