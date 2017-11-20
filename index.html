@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <script src="main.js" </script>
+  <script src ="example.js"</script>
+  <link rel="stylesheet" href="https://bootswatch.com/4/lux/bootstrap.min.css">
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <title>White Elephant/Dirty Santa/Yankee Swap</title>
+</head>
+
+<body>
+
+<!--- Navbar --->
+<ul class="nav">
+  <li class="nav-item">
+    <a class="nav-link" href="#">Intro</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Add Gifts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Active Gifts</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#">Inactive Gifts</a>
+  </li>
+</ul>
+
+<!--- Headline --->
+<div class="jumbotron text-center">
+<h1 id='heading'>Dirty Santa and the Nash Equilbirum</h1>
+</div>
+
+<!--- Intro information --->
+  <div class="container">
+    <div class="row">
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h1>John Nash</h1>
+          </div>
+            <div class="panel-body">
+              <p>Info about John Nash.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h1>Dirty Santa</h1>
+          </div>
+            <div class="panel-body">
+              <p>Info about Dirty Santa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h1>The Point</h1>
+          </div>
+            <div class="panel-body">
+              <p>Info about the game.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<!--- Input row --->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-7">
+          <h3>Instructions</h3>
+          <p>To the right, you'll see your inputs. For each item in the game, include a name and a value. The value you assign to each item is completely subjective. However, it's best to keep it on a scale of 1-10, with 10 being the most valuable.</p>
+        </div>
+        <div class="col-sm-5">
+          <label for="name">Name</label>
+          <br>
+          <input type="text" name="giftName" value="" autocomplete="off" id="name" placeholder="E.g., 'Fire Truck'">
+          <br>
+          <br>
+          <label for="name">Value</label>
+          <br>
+          <input type="text" name="giftName" value="" autocomplete="off" id="value" placeholder="E.g., '5'">
+          <br>
+          <br>
+          <button type="button" onclick="addGift(); displayGifts(); domStrat();" class="btn btn-primary btn-sm" name="button">Add</button>
+        </div>
+      </div>
+    </div>
+
+<br>
+<br>
+
+<!--- Create alert for showing optimal choice --->
+<div class="alert alert-success text-center">
+  <p id="flashMessage"></p>
+</div>
+
+<!--- Active gifts row --->
+<div class="jumbotron">
+  <h3>Active Gifts</h3>
+  <ul id="actives"></ul>
+</div>
+
+<!--- Inactive gifts row --->
+<div class="jumbotron">
+  <h3>Inactive Gifts</h3>
+  <ul id="inactives"></ul>
+</div>
+
+</body>
+
+</html>
