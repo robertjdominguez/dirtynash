@@ -66,6 +66,9 @@ function displayGifts() {
   $('#actives').empty();
 
   // Loop over all active gifts
+  // Counter for id
+  counter = 0;
+
   for (var i = 0; i < activeGifts.length; i++) {
 
     // Create the elements: name, radio buttons
@@ -81,9 +84,7 @@ function displayGifts() {
     sOneLabel.innerHTML = 'Stolen Once';
     let sOne = document.createElement('input');
     sOne.setAttribute('type', 'radio');
-    sOne.setAttribute('onclick', 'activeGifts[0].stealOne();'); /* TODO
-    need to figure out how to dynamically change this to represent the index
-    of the gift in the array */
+    sOne.setAttribute('onclick', "activeGifts["+counter+"].stealOne();");
 
     let brk = document.createElement('br');
 
@@ -92,8 +93,7 @@ function displayGifts() {
     sTwoLabel.innerHTML = 'Stolen Twice';
     let sTwo = document.createElement('input');
     sTwo.setAttribute('type', 'radio');
-    sTwo.setAttribute('onclick', 'activeGifts[0].stealTwo(); displayInactive(); displayGifts(); domStrat();');
-    /* TODO same as previous steal */
+    sTwo.setAttribute('onclick', "activeGifts["+counter+"].stealTwo(); displayInactive(); displayGifts(); domStrat();");
 
     // Create the buttons and labels
     document.getElementById('actives').appendChild(sOneLabel);
@@ -101,6 +101,8 @@ function displayGifts() {
     document.getElementById('actives').appendChild(brk);
     document.getElementById('actives').appendChild(sTwoLabel);
     document.getElementById('actives').appendChild(sTwo);
+
+    counter += 1;
   }
 }
 
@@ -150,7 +152,7 @@ function domStrat() {
     console.log(msg);
 
     // Flash an alert to the user
-    document.getElementById('flashMessage').innerHTML = msg; // Still not displaying
+    document.getElementById('flashMessage').innerHTML = msg;
 
   } else {
 
@@ -158,6 +160,6 @@ function domStrat() {
     console.log(msg);
 
     // Flash an alert to the user
-    document.getElementById('flashMessage').innerHTML = msg; // Still not displaying
+    document.getElementById('flashMessage').innerHTML = msg;
   }
 }
